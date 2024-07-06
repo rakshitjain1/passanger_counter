@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background-image: url(/katsuma-tanaka-xaAHMpNqIhw-unsplash.jpg);
+        background-size: cover;
+        font-weight: bold;
+        text-align: center;
+      }
+      h1 {
+        margin-top: 100px;
+        margin-bottom: 10px;
+        color: white;
+      }
+      h2 {
+        color: white;
+        font-size: 50px;
+        margin-top: 0;
+        margin-bottom: 20px;
+      }
+      button {
+        /* display: flex; */
+        /* text-align: center; */
+        /* justify-content: center; */
+        border-radius: 6px;
+        color: white;
+        width: 200px;
+        border: none;
+        text-align: center;
+        margin: 10px 5px 10px 5px;
+        background-color: aqua;
+        padding: 4px 8px;
+        font-size: 25px;
+        
+      }
+      #incres-btn {
+        background-color: darkred;
+      }
+      #save-a{
+        background-color: greenyellow;
+      }
+      /* #btn{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        flex-direction: column;
+         margin-left: 270px; }
+         */
+        #save-el
+          {
+        width: 200px;
+        margin-left: 280px;
+          background-color: black;
+           color: wheat;
+           padding: 10px 10px;
+         }
+      
+        </style>
+  </head>
+  <body>
+    <h1>People entered</h1>
+
+    <h2 id="count-a">0</h2>
+
+    <button id="incres-btn" onclick="increment()">count</button>
+
+
+
+    <button id="save-a" onclick="save()">Save</button>
+    <p id="save-el"><span>Previous entires:   </span></p>
+   
+
+
+
+
+
+    <script>
+      let saveEl =document.getElementById("save-el")
+      let countb = document.getElementById("count-a");
+      let count = 0;
+
+
+      function increment() {
+        count += 1;
+        countb.textContent = count;
+      }
+  
+      
+
+      function save(){
+
+        let conutstr =  count + "-"
+        saveEl.textContent+= conutstr
+        console.log(count)
+        count = count;
+        countb.textContent=0   
+        count=0     
+      }
+
+    
+    </script>
+  </body>
+</html>

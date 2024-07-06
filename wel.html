@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 50%;
+            margin-left: 100px;
+        }
+
+        p{
+            margin-left: 100px;
+        }
+        button{
+            color: black;
+            background-color: aqua;
+            border-radius: 4px;
+            margin-left: 100px;
+            cursor: pointer;
+        }
+        #error{
+            color: red;
+            font-weight: 200;
+        }
+    </style>
+</head>
+<body>
+    <p id="wel"></p>
+        
+
+
+    <img src="/katsuma-tanaka-xaAHMpNqIhw-unsplash.jpg" alt="nike shoes">
+    <p>Nike shoes</p>
+    <button onclick="purchase()">purchase -$149</button>
+    <p id="error"></p>
+
+
+    <span id="num1-el"></span>
+    <span id="num2-el"></span>
+    <br>
+    <button onclick="add()">ADD</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="multi()">multi</button>
+    <button onclick="divide()">divide</button>
+    <br>
+    <span id="sum-el"></span>
+
+
+    <script>
+      
+let errorpara=document.getElementById("error")
+    function purchase(){
+        errorpara.textContent="some  went wrong,plz try again"
+
+        
+    }
+
+
+
+
+
+           let wel=document.getElementById("wel")
+
+           let name ="Rakshit"
+           let greeting="Welcome back "
+
+       wel.innerText=  greeting+name
+
+           wel.innerText += " 👊"
+
+        let firstname="rakshit "
+        let lastname="jain"
+        fullname= firstname+lastname
+      console.log(fullname)
+
+
+//   function call
+        let name1="Rakshit";
+        let greeting1="hi there";
+        function logout(){
+          console.log(greeting1+","+name1+"!")
+        }
+        logout()
+
+
+        let mypoint=3
+
+
+        function add3points()
+{
+    mypoint+=3
+}
+
+function remove1point(){
+    mypoint-=1
+        
+}
+add3points()
+add3points()
+add3points()
+remove1point()
+remove1point()
+ 
+console.log(mypoint)
+
+console.log("2"+2)
+console.log(11+7)
+console.log(6+"5")
+console.log(5+9 +" my points:")
+console.log(" my points:"+5+9 )
+console.log(2+2)
+console.log("11"+"14")
+
+
+
+
+
+let num1=8
+let num2=2
+document.getElementById("num1-el").textContent=num1
+document.getElementById("num2-el").textContent=num2
+
+let sumel=document.getElementById("sum-el")
+
+function add(){
+    let res =num1+num2
+     sumel.textContent ="sum: "+res
+
+}
+function sub(){
+     sumel.textContent =num1-num2
+
+}
+function multi(){
+     sumel.textContent =num1*num2
+
+}
+function divide(){
+     sumel.textContent =num1/num2
+
+}
+
+
+
+
+    </script>
+
+</body>
+</html>
